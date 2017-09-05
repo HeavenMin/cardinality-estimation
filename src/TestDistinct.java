@@ -2,10 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-// TestDistinct.java
-// Example "main class" for distinct elements counter
-// awirth for COMP90056
-// Sep 2017
+//AUTHOR : MIN
+//PURPOSE : AMS algorithm
+//VERSION : 1
+//DATE : 9.2017
 
 public class TestDistinct{
 	
@@ -14,8 +14,8 @@ public class TestDistinct{
 		
 		int d = 0;
 		
-		//Distinct a = new AMS(0x0fffffff,10);
-		//Distinct b = new BJKST1(0x0001ffff,1);
+		Distinct a = new AMS(0x0fffffff,10);
+//		Distinct b = new BJKST1(0x0001ffff,1);
 //		Distinct c = new BJKST3(0x0fffffff,1);
 		
 		if(args.length == 0){
@@ -31,10 +31,11 @@ public class TestDistinct{
 			String s;
 			while(scanner.hasNextLine()){
 				s = scanner.nextLine();
+				a.add(s);
 //				c.add(s);
 			}
 			scanner.close();
-//			System.out.format("%12f%n",c.distinct());
+			System.out.format("%12f%n",a.distinct());
 		} catch (FileNotFoundException ex) {
 			System.err.println("No file: "+fileName);
 		}
