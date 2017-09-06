@@ -1,5 +1,10 @@
 import java.util.Arrays;
 
+//AMS.java
+//AMS distinct elements counter
+//awirth for COMP90056
+//Aug 2017
+
 // AUTHOR : MIN
 // PURPOSE : AMS algorithm
 // VERSION : 1

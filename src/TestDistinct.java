@@ -2,6 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
+//TestDistinct.java
+//Example "main class" for distinct elements counter
+//awirth for COMP90056
+//Sep 2017
+
 //AUTHOR : MIN
 //PURPOSE : AMS algorithm
 //VERSION : 1

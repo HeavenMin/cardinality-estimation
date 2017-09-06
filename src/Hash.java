@@ -1,5 +1,7 @@
 import java.util.function.Predicate;
 
+
+
 // AUTHOR : MIN
 // PURPOSE : AMS algorithm
 // VERSION : 1
@@ -10,6 +12,7 @@ public class Hash {
 	private int a,b;
 	
 	public Hash() {
+		//randomly get a and b
 		a=StdRandom.uniform(p-1)+1;
 		b=StdRandom.uniform(p+1);
 	}
