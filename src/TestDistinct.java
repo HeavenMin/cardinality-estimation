@@ -24,6 +24,7 @@ public class TestDistinct{
 		Distinct a = new AMS(0x0fffffff,10);
 //		Distinct b = new BJKST1(0x0001ffff,1);
 //		Distinct c = new BJKST3(0x0fffffff,1);
+		Distinct z = new Hyperloglog(16);
 		
 		if(args.length == 0){
 			System.err.println("No fileName argument.");
@@ -40,9 +41,11 @@ public class TestDistinct{
 				s = scanner.nextLine();
 				a.add(s);
 //				c.add(s);
+				z.add(s);
 			}
 			scanner.close();
 			System.out.format("%12f%n",a.distinct());
+			System.out.format("%12f%n",z.distinct());
 		} catch (FileNotFoundException ex) {
 			System.err.println("No file: "+fileName);
 		}

@@ -1,24 +1,20 @@
 import java.util.Arrays;
 
-//AMS.java
-//AMS distinct elements counter
-//awirth for COMP90056
-//Aug 2017
-
 // AUTHOR : MIN
 // PURPOSE : AMS algorithm
 // VERSION : 1
-// DATE : 9.2017
+// DATE : 8.2017
 
 public class AMS implements Distinct {
 	private int zList[];
 	private int n;	//domain and range
 	private Hash hashList[];
 	private int RANGE = 536870912-3;
-	private int c = 18;
+	private int c = 18;	// c = 1 / epsilon^2
 //	private int c = 1835;
 	private int k;
 	
+	// del1 decide the success rate
 	public AMS(int n, int del1) {
 		k = (int) Math.ceil(c*Math.log(del1));
 		this.n = n;
@@ -49,8 +45,8 @@ public class AMS implements Distinct {
     }
 	
 	public double distinct(){
-		double m = getMedian(zList);
-		return Math.pow(2, m+0.5);
+		double z = getMedian(zList);
+		return Math.pow(2, z+0.5);
 	}
 	
 
