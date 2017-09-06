@@ -11,7 +11,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 //AUTHOR : MIN
 //PURPOSE : AMS algorithm
-//VERSION : 1
+//VERSION : 1.0
 //DATE : 9.2017
 
 public class TestDistinct{
@@ -22,7 +22,7 @@ public class TestDistinct{
 		int d = 0;
 		
 		Distinct a = new AMS(0x0fffffff,10);
-//		Distinct b = new BJKST1(0x0001ffff,1);
+//		Distinct b = new BJKST1(0x0fffffff,1);
 //		Distinct c = new BJKST3(0x0fffffff,1);
 		Distinct z = new Hyperloglog(16);
 		
@@ -31,6 +31,7 @@ public class TestDistinct{
 			System.exit(1);
 		}
 		String fileName = args[0];
+		double totalTime = 0.0;
 		
 		Scanner scanner;
 		try{
@@ -39,13 +40,19 @@ public class TestDistinct{
 			String s;
 			while(scanner.hasNextLine()){
 				s = scanner.nextLine();
+				long start = System.currentTimeMillis(); 
 				a.add(s);
+				long now = System.currentTimeMillis();
+				double time = (now - start) /1000.0;
+				totalTime += time;
 //				c.add(s);
 				z.add(s);
 			}
 			scanner.close();
 			System.out.format("%12f%n",a.distinct());
+			System.out.format("%12f%n",totalTime);
 			System.out.format("%12f%n",z.distinct());
+			
 		} catch (FileNotFoundException ex) {
 			System.err.println("No file: "+fileName);
 		}

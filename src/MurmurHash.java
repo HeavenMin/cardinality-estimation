@@ -145,7 +145,6 @@ public class MurmurHash {
         return hash64(o.toString());
     }
 
-    // 64 bit implementation copied from here:  https://github.com/tnm/murmurhash-java
 
     /**
      * Generates 64 bit hash from byte array with default seed value.
