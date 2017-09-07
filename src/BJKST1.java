@@ -1,7 +1,7 @@
 import java.util.PriorityQueue;
 
 //AUTHOR : MIN
-//PURPOSE : AMS algorithm
+//PURPOSE : BJKST1 algorithm
 //VERSION : 1
 //DATE : 8.2017
 

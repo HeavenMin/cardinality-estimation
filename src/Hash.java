@@ -3,9 +3,9 @@ import java.util.function.Predicate;
 
 
 // AUTHOR : MIN
-// PURPOSE : AMS algorithm
+// PURPOSE : Hash function
 // VERSION : 1
-// DATE : 9.2017
+// DATE : 8.2017
 
 public class Hash {
 	private int p = 1073741789;	//a big prime numebr

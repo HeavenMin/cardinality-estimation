@@ -26,7 +26,7 @@
  * </p>
  */
 
-public class MurmurHash {
+public class MurmurHash2 {
 
     public static int hash(Object o) {
         if (o == null) {

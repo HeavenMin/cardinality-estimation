@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //AUTHOR : MIN
-//PURPOSE : AMS algorithm
+//PURPOSE : BJKST3 algorithm
 //VERSION : 1
 //DATE : 8.2017
 

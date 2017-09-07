@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import com.sun.org.apache.bcel.internal.generic.StackConsumer;
+
 // AUTHOR : MIN
 // PURPOSE : AMS algorithm
 // VERSION : 1
@@ -37,6 +39,14 @@ public class AMS implements Distinct {
 		}
 	}
 	
+	private double getMean(int[] data) {
+		double sum = 0;
+		for (int i = 0; i < k; i++) {
+			sum += data[i];
+		}
+		return sum / k;
+	}
+	
 	public static double getMedian(int[] data) {
         int[] copy = Arrays.copyOf(data, data.length);
         Arrays.sort(copy);
@@ -46,6 +56,7 @@ public class AMS implements Distinct {
 	
 	public double distinct(){
 		double z = getMedian(zList);
+//		double z = getMean(zList);
 		return Math.pow(2, z+0.5);
 	}
 	
