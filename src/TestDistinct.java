@@ -11,7 +11,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 //Sep 2017
 
 //AUTHOR : MIN
-//PURPOSE : "main class" for distinct elements counter
+//PURPOSE : "main class" for Cardinality estimation 
 //VERSION : 1.0
 //DATE : 9.2017
 
