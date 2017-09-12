@@ -45,6 +45,7 @@ public class MinHyperloglog2 implements Distinct {
 
 	public void add(Object object) {
 //		int x = MurmurHash2.hash(object);	//get murmurhash2 hash value
+		int x = h.
 		int idx = x >>> (DOMAIN - p);	//get first p bits of x, and it's a 32bits hash funciton
 		//number of the leading zeros in the binary representation of x plus 1
 		//plue 1 is used to convenient calculation empty registers
